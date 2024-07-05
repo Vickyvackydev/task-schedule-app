@@ -63,9 +63,9 @@ function TaskComponent(props: TaskProps) {
             props.taskdata.map((data) => (
               <div
                 key={data.id}
-                className="bg-white rounded-md shadow-sm items-center grid grid-cols-3 px-3 py-3 w-full"
+                className="bg-white rounded-md shadow-sm items-center lg:grid lg:grid-cols-3 flex justify-evenly px-3 py-3 w-full"
               >
-                <div className="flex flex-col  ">
+                <div className="flex flex-col lg:mr-0 mr-3 ">
                   <span className="font-semibold lg:text-lg text-xs">
                     {mobilescreen ? `${data.title.slice(0, 5)}...` : data.title}
                   </span>
@@ -90,7 +90,7 @@ function TaskComponent(props: TaskProps) {
                     : `${data.description}.`}
                 </div>
 
-                <div className="flex lg:gap-16 ml-32 gap-3 items-center">
+                <div className="flex lg:gap-16 lg:ml-32 ml-0 gap-0 items-center">
                   <div className="flex items-center gap-1 text-xs font-semibold text-gray-400 bg-gray-100 p-1 rounded-md">
                     <span
                       className={`${
@@ -102,7 +102,7 @@ function TaskComponent(props: TaskProps) {
                       {tab === "lists" ? (
                         <div className="flex items-center gap-1">
                           {data.status === "executed" ? (
-                            <FaCheckCircle className="text-green-500" />
+                            <FaCheckCircle className="text-green-500 " />
                           ) : (
                             <FaSyncAlt className="text-orange-500" />
                           )}
