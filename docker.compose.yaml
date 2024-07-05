@@ -1,0 +1,8 @@
+services:
+taskapp:
+build: ./taskapp
+container_name: taskapp_c
+ports:
+  - "3000:3000"
+stdin_open: true
+tty: true
